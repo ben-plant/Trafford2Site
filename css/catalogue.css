@@ -1,0 +1,20 @@
+body
+{
+	background: #2965CC;
+	color: #FFFFFF;
+	width: auto;
+}
+
+.largeheading 
+{
+	font-family: 'Alegreya Sans SC', sans-serif;
+	text-shadow: 3px 3px #032266;
+	color: #FFFFFF;
+}
+
+#maintitle
+{
+	font-size: 100px;
+}
+
+

@@ -1,0 +1,25 @@
+/*classes*/
+.adminpanelbutton
+{
+	height: 75px;
+	width: 300px;
+	position: inherit;
+	background-color: #6C6C73;
+	cursor: pointer;
+	margin-top: 5px;
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+	text-shadow: 3px 3px #032266;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+/*divs*/
+#makequiz
+{
+}
+
+#makequiz:hover
+{
+	
+}

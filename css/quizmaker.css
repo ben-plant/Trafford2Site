@@ -1,0 +1,37 @@
+.panelsubdivision
+{
+    width: 50%;
+    height: 100%;
+}
+
+#quizminorpanel
+{
+    top: 60px;
+    height: 100px;
+}
+
+#quizmajorpanel
+{
+    top: 75px;
+    height: 800px;
+}
+
+#quizminorleftsub
+{
+    float: left;
+}
+
+#quizminorrightsub
+{
+    float: right;
+}
+
+#quizminorleftsub:hover
+{
+    background: #FF0000;
+}
+
+#quizminorrightsub:hover
+{
+    background: #FF0000;
+}

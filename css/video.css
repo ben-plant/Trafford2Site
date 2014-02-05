@@ -1,0 +1,35 @@
+body
+{
+	background: #2965CC;
+	color: #FFFFFF;
+	width: auto;
+}
+
+.largeheading 
+{
+	font-family: 'Lobster', cursive;
+	text-shadow: 3px 3px #032266;
+	color: #FFFFFF;
+}
+
+#maintitle
+{
+	font-size: 100px;
+}
+
+#comment_author
+{
+	background: #00FF00;
+}
+
+#comment_text
+{
+	background: #FF0000;
+}
+
+#comment_timestamp
+{
+	background: #0000FF;
+}
+
+
