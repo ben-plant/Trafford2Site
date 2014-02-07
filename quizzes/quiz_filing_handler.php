@@ -5,7 +5,9 @@ session_start();
 	$uuid = $_POST['uuid'];
     $uuid_explode = explode("-", $uuid);
 
-	include '/include/keys.php';
+    $path = $_SERVER['DOCUMENT_ROOT'];
+    $path .= '/include/keys.php';
+    include_once($path);
 
 	if (($mysqli = genQuizSQL()) == null)
     {

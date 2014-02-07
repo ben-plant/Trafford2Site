@@ -75,10 +75,16 @@
         $.ajax({
             url: '/quizzes/quiz_population_handler.php',
             type: 'POST',
-            data: 'request=uuid',
-            dataType: 'text',
+            data: 'request=newest',
+            dataType: 'json',
             success: function(data) {
-                window.location.href = "/quizzes/complete_quiz.php?uuid=" + data;
+                if (data.quiz_response[0].response === 200)
+                {
+                    window.location.href = "/quizzes/complete_quiz.php?uuid=" + data.quiz_response[0].uuid + "&qq=" + data.quiz_response[0].q_quantity;
+                }
+                
+                
+                
             }
         });
     }
@@ -119,35 +125,20 @@
 
 </head>
 <body>
-<div id="mainpanel" class="panel">
-	<div id="videopanel" class="subpanel">
-		<div id="player">
-		</div>
-		<div id="videolist" class="listcontainer">
-			<div class="videosugg" id="videosugg1">
-				Video suggestion #1
-			</div>			
-			<div class="videosugg" id="videosugg2">
-				Video suggestion #2
-			</div>
-			<div class="videosugg" id="videosugg3">
-				Video suggestion #3
-			</div>
-			<div class="videosugg" id="videosugg4">
-				Video suggestion #4
-			</div>
-		</div>
-	</div>	
-	<div id="awardspanel" class="subpanel">
-		<div class="listcontainer">
-			<div class="award" id="award_star">
-				star
-			</div>
-			<div class="award" id="award_mvp">
-				mvp
-			</div>
-		</div>
-	</div>
-</div>
+    <div id="indexpanel" class="panel">
+        
+    </div>
+    <div id="sidepanel" class="panel">
+        <div id="awardspanel" class="subpanel">
+            <div class="listcontainer">
+                <div class="award" id="award_star">
+                    star
+                </div>
+                <div class="award" id="award_mvp">
+                    mvp
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

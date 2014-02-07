@@ -133,6 +133,7 @@ function fileQuiz()
         var thisQ = document.getElementById(i).children;
         submitQuestion(i, thisQ[0].value, thisQ[1].value);
     }  
+    alert("Quiz uploaded successfully!");
 }
 function submitQuestion(qNumber, qText, qType)
 {

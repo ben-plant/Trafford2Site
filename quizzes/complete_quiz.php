@@ -5,7 +5,7 @@
 	
 	if (empty($_SESSION['username']) || empty($_SESSION['password']))
 	{
-		header("location:login.php");
+		header("location:/login.php");
 	}
 ?>
 
@@ -14,7 +14,9 @@
 <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
 <title>Trafford L51</title>
+
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
 <link rel="stylesheet" type="text/css" href="/css/quiz_out.css" />
 <link rel="icon" href="favicon.ico">
@@ -25,7 +27,10 @@
 <script src="/javascript/navigation.js"></script>
 <script src="/javascript/modifyCSS.js"></script>
 <script src="/javascript/cookie.js"></script>
+<script src="js/insertQuestionDiv.js"></script>
+</head>
 
+<body onload="printQuestions()">
 <div id="topbar" class="crossbar">
 	<div id="videosbutton" class="topbarbutton" onclick="loadIndex()">
 		<div class="buttontext">
@@ -38,7 +43,7 @@
 		</div>
 	</div>
 </div>
-<div id="mainpanel" class="panel">
+<div id="quizpanel" class="panel">
 
 </div>
 </body>

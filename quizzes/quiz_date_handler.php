@@ -2,7 +2,9 @@
 
     $uuid = $_GET['uuid'];
 
-	include '/include/keys.php';
+    $path = $_SERVER['DOCUMENT_ROOT'];
+    $path .= '/include/keys.php';
+    include_once($path);
 
 	if (($mysqli = genLoginSQL()) == null)
     {

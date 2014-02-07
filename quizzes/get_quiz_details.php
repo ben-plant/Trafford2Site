@@ -1,6 +1,8 @@
 <?php
 
-include '/include/keys.php';
+$path = $_SERVER['DOCUMENT_ROOT'];
+$path .= '/include/keys.php';
+include_once($path);
 
 class quizDetailer
 {
@@ -11,7 +13,7 @@ class quizDetailer
     
     public function __construct()
     {
-        if (($this->mysqli_index = genLoginSQL()) == null || ($this->mysqli_direc = genQuizSQL() == null))
+        if (($this->mysqli_index = genLoginSQL()) == null || ($this->mysqli_direc = genQuizSQL()) == null)
         {
             return 107;
         }
@@ -101,8 +103,7 @@ class quizDetailer
 
     public function __destruct() 
     {
-        $this->mysqli_direc->close();
-        $this->mysqli_index->close();
+        //sort later
     }
 
 }

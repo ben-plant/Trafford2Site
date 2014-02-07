@@ -1,6 +1,8 @@
 <?php
 	require_once 'include/json.php';
-    include 'include/keys.php';
+    $path = $_SERVER['DOCUMENT_ROOT'];
+    $path .= '/include/keys.php';
+    include_once($path);
 
 	session_start();
 	$username = htmlspecialchars($_POST['username']);

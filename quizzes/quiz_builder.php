@@ -1,10 +1,12 @@
 <?php
 
-    include '/include/keys.php';
+    $path = $_SERVER['DOCUMENT_ROOT'];
+    $path .= '/include/keys.php';
+    include_once($path);
 
     //handles the quiz directory within o2_users
 
-    if (($quizlibrarian = genLoginSQL()) == null || ($quiztablehandler = genQuizSQL() == null))
+    if (($quizlibrarian = genLoginSQL()) == null || ($quiztablehandler = genQuizSQL()) == null)
     {
         return 101;
     }
